@@ -1,5 +1,6 @@
 package org.apache.kafka.connect.socket;
 
+import org.apache.kafka.common.config.ConfigDef;
 import org.apache.kafka.common.utils.AppInfoParser;
 import org.apache.kafka.connect.connector.Task;
 import org.apache.kafka.connect.errors.ConnectException;
@@ -30,6 +31,11 @@ public class SocketSourceConnector extends SourceConnector {
     private String schemaName;
     private String batchSize;
     private String topic;
+
+    @Override
+    public ConfigDef config() {
+        return SocketSourceConfig.CONFIG_DEF;
+    }
 
     /**
      * Get the version of this connector.
