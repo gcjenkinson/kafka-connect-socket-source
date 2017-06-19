@@ -87,7 +87,8 @@ public class SocketSourceTask extends SourceTask {
             messageStruct.put("message", message);
             // creates the record
             // no need to save offsets
-            SourceRecord record = new SourceRecord(Collections.singletonMap("socket", 0), Collections.singletonMap("0", 0), topic, messageStruct.schema(), messageStruct);
+            //SourceRecord record = new SourceRecord(Collections.singletonMap("socket", 0), Collections.singletonMap("0", 0), topic, messageStruct.schema(), messageStruct);
+            SourceRecord record = new SourceRecord(Collections.singletonMap("socket", 0), Collections.singletonMap("0", 0), topic, schema, message);
             records.add(record);
         }
         return records;
