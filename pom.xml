@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.apache.kafka</groupId>
-    <artifactId>connect-socket-source</artifactId>
-    <version>1.0</version>
+    <artifactId>kafka-connect-socket-source</artifactId>
+    <version>0.0.1</version>
     <build>
         <plugins>
             <plugin>
